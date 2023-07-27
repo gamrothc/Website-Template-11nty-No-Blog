@@ -1,0 +1,88 @@
+/* STYLE SPECIFIC FOR COMPONENTS */
+
+/*-- -------------------------- -->
+<---               CTA          -->
+<--- -------------------------- -*/
+.cta {
+	background: linear-gradient(118deg, #7F2FF9 3.95%, #5F71F6 100%);
+	// filter: drop-shadow(0px -1px 16px rgba(0, 0, 0, 0.19));
+
+	position: relative;
+	color: #fff;
+
+	.cs-container {
+		text-align: center;
+		
+		h2 {
+			color: #fff;
+			margin-bottom: 2rem;
+		}
+
+		.button-solid {
+			background: none;
+			background-color: #fff;
+			color: var(--bodyTextColor);
+			border: 1px solid #fff;
+			margin-right: 1rem;
+				&:before {
+					position: absolute;
+					content: '';
+					top: 0;
+					border-radius: 55px;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background: linear-gradient(123deg, #7F2FF9 3.95%, #5F71F6 100%);
+					z-index: -1;
+					transition: opacity 0.5s linear;
+					opacity: 0;
+			
+				}
+				&:hover {
+					background-color: transparent;
+					-webkit-transition: background-color 0.5s linear;
+					-ms-transition: background-color 0.5s linear;
+					transition: background-color 0.5s linear;
+					color: #fff;
+				}
+				&:hover:before {
+					opacity: 1;
+				}
+		}
+
+
+	}
+
+	.bottom-divider {
+		background-image: url("/assets/svgs/background-curve-clip-purple-bottom.svg");
+		background-size: 100% 80px;
+		bottom: 0;
+		height: 80px;
+		z-index: 1;
+		transform: scale(1,1);
+		display: none;
+		background-repeat-y: no-repeat;
+		position: absolute;
+		pointer-events: none;
+		width: 100%;
+		left: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+		vertical-align: baseline;
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+	.cta .bottom-divider { 
+			display: block;
+	}
+
+}

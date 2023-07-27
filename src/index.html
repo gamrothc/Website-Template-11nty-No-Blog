@@ -1,0 +1,56 @@
+---
+title: 'North East''s Top Fencing and Solar Contractor | Ninsa LLC'
+description: 'Empowering the North East with sustainable solutions. Top-notch commercial solar & fencing installations in NJ, NY, PA & DE - Choose Ninsa LLC today.'
+preloadImg: ''
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+{% from "components/cta.html" import cta %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/local.css">
+    <link rel="stylesheet" href="/css/critical.css">
+    <link rel="stylesheet" href="/css/components.css">
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                home-hero                 -->
+    <!-- ============================================ -->
+    <section id="home-hero">
+        <div class="cs-container">
+            <div class="home-content">
+                <h2 class="cs-hero-title">
+                    Tacoma Web Design and SEO: <span class="text-highlight">Boost</span> Your Online Presence
+                </h2>
+                <p class="cs-text">In the digital age, a well-designed website is crucial for business success.</p>
+                <p class="cs-text second-line">At Tacoma Website Design and SEO, we specialize in crafting unique, user-friendly websites that attract and retain customers. Elevate your online presence with us.</p>
+                <a href="/contact.html" class="button-oval button-solid">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
