@@ -82,7 +82,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    color: var(--headerColor);
+    color: var(--headingTextColor);
 }
 
 p,
@@ -148,25 +148,43 @@ a {
 }
 
 .button-solid {
-	background: linear-gradient(123deg, #7F2FF9 3.95%, #5F71F6 100%);
-	background-color: var(--primary);
-	&:before {
-		position: absolute;
-		content: '';
-		top: 0;
-		border-radius: 55px;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background: linear-gradient(123deg, #7F2FF9 100%, #5F71F6 100%);
-		z-index: -1;
-		transition: opacity 0.3s linear;
-		opacity: 0;
+    font-size: calc(16 / 16 * 1rem);
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: calc(150 / 16 * 1rem);
+    padding: 0 calc(24 / 16 * 1rem);
+    background-color: var(--primary);
+    border-radius: calc(4 / 16 * 1rem);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
 
-	}
-	&:hover:before {
-		opacity: 1;
-	}
+    &:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: calc(4 / 16 * 1rem);
+        transition: width .3s;
+    }
+
+    &:hover {
+        &:before {
+            width: 100%;
+        }
+    }
 }
 
 .text-highlight {
@@ -430,7 +448,7 @@ a {
             line-height: 1.2em;
             text-decoration: none;
             margin: 0;
-            color: var(--headerColor);
+            color: var(--headingTextColor);
             display: inline-block;
             position: relative;
 
@@ -454,7 +472,7 @@ a {
             }
         }
 
-        .cs-button-solid {
+        .button-solid {
             display: none;
         }
     }
@@ -658,7 +676,7 @@ a {
 @media only screen and (min-width: 64rem) {
     #cs-navigation {
         width: 100%;
-        padding: calc(16 / 16 * 1rem);
+        padding: 0rem calc(16 / 16 * 1rem);
         /* prevents padding from affecting height and width */
         box-sizing: border-box;
         background-color: #fff;
@@ -714,6 +732,8 @@ a {
         .cs-li {
             list-style: none;
             /* prevent flexbox from squishing it */
+            /* added to prevent drop down from disappearing */
+            padding: 2rem 0rem;
             flex: none;
         }
 
@@ -750,46 +770,6 @@ a {
                 bottom: calc(0 / 16 * 1rem);
                 left: 0;
                 transition: width .3s;
-            }
-        }
-
-        .cs-button-solid {
-            font-size: calc(16 / 16 * 1rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875em, 5.5vw, 3.5em);
-            text-decoration: none;
-	    	font-weight: 700;
-	        text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: calc(150 / 16 * 1rem);
-            padding: 0 calc(24 / 16 * 1rem);
-            background-color: var(--primary);
-            border-radius: calc(4 / 16 * 1rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: '';
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: calc(4 / 16 * 1rem);
-                transition: width .3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
             }
         }
     }

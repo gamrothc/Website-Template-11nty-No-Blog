@@ -19,7 +19,6 @@
                 </div>
             </button>
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             <!-- This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one -->
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
@@ -32,13 +31,25 @@
                         <!-- If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes-->
                         <li class="cs-li {% if hasChild %} cs-dropdown {% endif %}" {% if hasChild %} tabindex="0"{% endif %}>
 
-                            <!-- Similarly, if the link is active, apply the necessary classes -->
-                            <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
-                                {{ entry.key }}
-                                {% if hasChild %}
-                                    <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                                {% endif %}
-                            </a>
+                            <!-- Colin added this if else (and the if code), if drop down make it a span so the drop down isn't linkn-->
+                            {% if hasChild %}
+                                <!-- Similarly, if the link is active, apply the necessary classes -->
+                                <span class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
+                                    {{ entry.key }}
+                                    {% if hasChild %}
+                                        <img class="cs-drop-icon" src="/assets/svgs/down-1.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                    {% endif %}
+                                </span>
+                            <!-- if it isn't a drop down then make it a link -->
+                            {% else %}
+                                <!-- Similarly, if the link is active, apply the necessary classes -->
+                                <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
+                                    {{ entry.key }}
+                                    {% if hasChild %}
+                                        <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                    {% endif %}
+                                </a>
+                            {% endif %}
 
                             <!-- Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link -->
                             {% if hasChild %}
@@ -55,7 +66,7 @@
                 </ul>
             </div>
         </nav>
-        <a href="" class="cs-button-solid cs-nav-button">Get a Quote</a>
+        <a href="" class="button-solid">Get a Quote</a>
     </div>
 </header>
                                                      
