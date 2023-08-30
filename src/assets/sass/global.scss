@@ -88,7 +88,6 @@ h6 {
 p,
 li,
 a {
-    font-size: calc(18 / 16 * 1rem);
     line-height: 27/18em;
     margin: 0;
 }
@@ -145,6 +144,14 @@ a {
     margin-bottom: 16px;
     line-height: 28px;
     opacity: 0.8;
+
+    &.last-line {
+        margin-bottom: 0rem;
+    }
+
+    &.button-bellow {
+        margin-bottom: 2rem;
+    }
 }
 
 .button-solid {

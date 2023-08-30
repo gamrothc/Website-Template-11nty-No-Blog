@@ -1,14 +1,14 @@
 {
-	"name": "Tacoma Web Design and SEO",
-	"email": "nfondacaro@ninsallc.com",
-	"phoneForTel": "609-561-7103",
-	"phoneFormatted": "(609) 561-7103",
+	"name": "Business Name",
+	"email": "info@domainname.com",
+	"phoneForTel": "111-222-3333",
+	"phoneFormatted": "(111) 222-3333",
 	"address": {
-		"lineOne": "125 Lincoln St",
-		"city": "Hammonton",
-		"state": "NJ",
-		"zip": "08037",
-		"mapLink": "https://goo.gl/maps/94JrBgonekuKGwM89"
+		"lineOne": "132 Michigan Ave",
+		"city": "Tacoma",
+		"state": "WA",
+		"zip": "98402",
+		"mapLink": "https://goo.gl/maps/95653653365"
 	},
-	"domain": "www.www.ninsallc..com"
+	"domain": "www.domainname.com"
 }

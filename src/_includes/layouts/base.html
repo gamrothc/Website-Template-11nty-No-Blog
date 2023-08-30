@@ -42,32 +42,11 @@
     {% endif %}
 
     <!-- Sitewide Stylesheets and Scripts -->
-    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/global.css">
     <script defer src="/assets/js/nav.js"></script>
 
     {% block head %}{% endblock %}
-
-    <!--For home page, use service keywords for the title, including location for SEO.
-        Other pages should just include the page name.
-        
-        EXAMPLE:
-        Home page - House Painting Contractors | Painters and Co. | TestCity, WA
-        About Page - About us | Painters and Co.
-        -->
-    <title>
-      {% if page.url == '/'%}
-        {{ title }}
-        |
-        {{ client.name }}
-        |
-        {{ client.address.city }},
-        {{ client.address.state }}
-      {% else %}
-        {{ title }}
-        |
-        {{ client.name }}
-      {% endif %}
-    </title>
+    <title>{{ title }}</title>
   </head>
   <body>
     <!--Screen reader skip main nav-->
