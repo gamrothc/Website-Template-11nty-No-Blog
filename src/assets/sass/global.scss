@@ -10,8 +10,8 @@
 	--secondary: #FCE729;
     --headingTextColor: #202020;
 	--bodyTextColor: #3D424D;
-	--secondarylight: #FBF08F;
-	--bodyTextColorWhite: #EBEBEB ;
+	--bodyTextColorWhite: #EBEBEB;
+    // --primaryDark: #1e0e97;
 	--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) clamp(1rem, 1.5vw, 2rem);
 }
 
@@ -28,23 +28,23 @@
     font-style: normal;
     font-weight: 400;
     src: url('../assets/fonts/inter-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* inter-600 - latin */
-  @font-face {
+}
+/* inter-600 - latin */
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     src: url('../assets/fonts/inter-v12-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* inter-700 - latin */
-  @font-face {
+}
+/* inter-700 - latin */
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     src: url('../assets/fonts/inter-v12-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+}
 
 
 body,
@@ -149,7 +149,7 @@ a {
         margin-bottom: 0rem;
     }
 
-    &.button-bellow {
+    &.button-below {
         margin-bottom: 2rem;
     }
 }
@@ -195,10 +195,7 @@ a {
 }
 
 .text-highlight {
-    background-image: linear-gradient(95deg,#5f71f6,#812afa);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary);
 }
 
 
