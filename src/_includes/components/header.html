@@ -40,13 +40,13 @@
                         {% endif %}
                         </a>
                     {% else %}
-                        <!-- If entry.url does not exist, render a paragraph tag instead -->
-                        <p href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
+                        <!-- If entry.url does not exist, render a span tag instead -->
+                        <span href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
                         {{ entry.key }}
                         {% if hasChild %}
                             <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
                         {% endif %}
-                        </p>
+                        </span>
                     {% endif %}
 
                     <!-- Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link -->
