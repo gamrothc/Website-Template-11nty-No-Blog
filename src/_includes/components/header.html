@@ -22,47 +22,45 @@
             <!-- This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one -->
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                    {% set navPages = collections.all | eleventyNavigation %}
-                    <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
-                    {% for entry in navPages %}
-                        <!-- Define a hasChild variable to make it easier to test what links are dropdowns-->
-                        {% set hasChild = entry.children.length %}
+                {% set navPages = collections.all | eleventyNavigation %}
+                <!-- Loop through all pages with eleventyNavigation in the frontmatter -->
+                {% for entry in navPages %}
+                    <!-- Define a hasChild variable to make it easier to test what links are dropdowns-->
+                    {% set hasChild = entry.children.length %}
 
-                        <!-- If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes-->
-                        <li class="cs-li {% if hasChild %} cs-dropdown {% endif %}" {% if hasChild %} tabindex="0"{% endif %}>
+                    <!-- If this page is a dropdown, give it the appropriate classes, icons, and accessibility attributes-->
+                    <li class="cs-li {% if hasChild %} cs-dropdown {% endif %}" {% if hasChild %} tabindex="0"{% endif %}>
 
-                            <!-- Colin added this if else (and the if code), if drop down make it a span so the drop down isn't linkn-->
-                            {% if hasChild %}
-                                <!-- Similarly, if the link is active, apply the necessary classes -->
-                                <span class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
-                                    {{ entry.key }}
-                                    {% if hasChild %}
-                                        <img class="cs-drop-icon" src="/assets/svgs/down-1.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                                    {% endif %}
-                                </span>
-                            <!-- if it isn't a drop down then make it a link -->
-                            {% else %}
-                                <!-- Similarly, if the link is active, apply the necessary classes -->
-                                <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
-                                    {{ entry.key }}
-                                    {% if hasChild %}
-                                        <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                                    {% endif %}
-                                </a>
-                            {% endif %}
+                    {% if entry.url %}
+                        <!-- If entry.url exists, render an anchor tag -->
+                        <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
+                        {{ entry.key }}
+                        {% if hasChild %}
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        {% endif %}
+                        </a>
+                    {% else %}
+                        <!-- If entry.url does not exist, render a paragraph tag instead -->
+                        <p href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
+                        {{ entry.key }}
+                        {% if hasChild %}
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        {% endif %}
+                        </p>
+                    {% endif %}
 
-                            <!-- Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link -->
-                            {% if hasChild %}
-                                <ul class="cs-drop-ul">
-                                    {% for child in entry.children %}
-                                        <li class="cs-drop-li">
-                                            <a href="{{ child.url }}" class="cs-li-link cs-drop-link">{{ child.key }}</a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
+                    <!-- Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link -->
+                    {% if hasChild %}
+                        <ul class="cs-drop-ul">
+                        {% for child in entry.children %}
+                            <li class="cs-drop-li">
+                            <a href="{{ child.url }}" class="cs-li-link cs-drop-link">{{ child.key }}</a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                    </li>
+                {% endfor %}
                 </ul>
             </div>
         </nav>
