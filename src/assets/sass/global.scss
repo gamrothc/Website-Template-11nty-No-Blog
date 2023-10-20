@@ -1,4 +1,4 @@
-/* CODESTITCH STYLES, RESET, HEADER/NAVIGATION AND FOOTER */
+/* Global Styles, RESET, HEADER/NAVIGATION AND FOOTER */
 
 /*-- -------------------------- -->
 <---        Core Styles         -->
@@ -13,11 +13,6 @@
 	--bodyTextColorWhite: #EBEBEB;
     // --primaryDark: #1e0e97;
 	--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) clamp(1rem, 1.5vw, 2rem);
-}
-
-
-.cs-section {
-    padding: var(--sectionPadding);
 }
 
 /* Fonts and general styles */
@@ -118,6 +113,14 @@ a {
 }
 
 
+/*-- -------------------------- -->
+<---    Component Styles        -->
+<--- -------------------------- -*/
+
+.cs-section {
+    padding: var(--sectionPadding);
+}
+
 .cs-title {
     margin-bottom: 16px;
     font-size: clamp(1.9375rem, 3.9vw, 3.0625rem);
@@ -194,6 +197,24 @@ a {
     }
 }
 
+.sbs-standard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+    .sbs-standard {
+        flex-direction: row;
+    }
+}
+
+/*-- -------------------------- -->
+<---        Utilities           -->
+<--- -------------------------- -*/
+
 .text-highlight {
     color: var(--primary);
 }
@@ -218,6 +239,7 @@ a {
 .hover-highlight:hover:before {
     width: 100%;
 }
+
 
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
