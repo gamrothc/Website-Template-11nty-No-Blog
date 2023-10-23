@@ -4,13 +4,13 @@
 
 <header id="cs-navigation">
     <div class="cs-container">
-        <!--Nav Logo-->
+        {# Nav Logo #}
         <a href="/" class="cs-logo" aria-label="back to home">
             <img src="/assets/images/logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
         </a>
-        <!--Navigation List-->
+        {# Navigation List #}
         <nav class="cs-nav">
-            <!--Mobile Nav Toggle-->
+            {# Mobile Nav Toggle #}
             <button class="cs-toggle" aria-label="mobile menu toggle">
                 <span class="cs-box" aria-hidden="true">
                     <span class="cs-line cs-line1" aria-hidden="true"></span>
@@ -18,21 +18,21 @@
                     <span class="cs-line cs-line3" aria-hidden="true"></span>
                 </span>
             </button>
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-            <!-- This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one -->
+            {#  We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are #}
+            {#  This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one  #}
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                 {% set navPages = collections.all | eleventyNavigation %}
-                <!-- Loop through all pages with eleventyNavigation in the frontmatter -->
+                {#  Loop through all pages with eleventyNavigation in the frontmatter #}
                 {% for entry in navPages %}
-                    <!-- Define a hasChild variable to make it easier to test what links are dropdowns-->
+                    {#  Define a hasChild variable to make it easier to test what links are dropdowns #}
                     {% set hasChild = entry.children.length %}
 
-                    <!-- If this page is a dropdown, give it the appropriate classes, icons, and accessibility attributes-->
+                    {#  If this page is a dropdown, give it the appropriate classes, icons, and accessibility attributes #}
                     <li class="cs-li {% if hasChild %} cs-dropdown {% endif %}" {% if hasChild %} tabindex="0"{% endif %}>
 
                     {% if entry.url %}
-                        <!-- If entry.url exists, render an anchor tag -->
+                        {#  If entry.url exists, render an anchor tag  #}
                         <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
                         {{ entry.key }}
                         {% if hasChild %}
@@ -40,7 +40,7 @@
                         {% endif %}
                         </a>
                     {% else %}
-                        <!-- If entry.url does not exist, render a span tag instead -->
+                        {#  If entry.url does not exist, render a span tag instead  #}
                         <span class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
                         {{ entry.key }}
                         {% if hasChild %}
@@ -49,7 +49,7 @@
                         </span>
                     {% endif %}
 
-                    <!-- Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link -->
+                    {#  Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link  #}
                     {% if hasChild %}
                         <ul class="cs-drop-ul">
                         {% for child in entry.children %}
