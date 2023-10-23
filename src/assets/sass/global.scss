@@ -121,12 +121,9 @@ a {
     padding: var(--sectionPadding);
 }
 
-.cs-title {
-    margin-bottom: 16px;
-    font-size: clamp(1.9375rem, 3.9vw, 3.0625rem);
-    color: var(--bodyTextColor);
-    font-weight: 600;
-    letter-spacing: -1.6px;
+.cs-container {
+    margin: auto;
+	max-width: 1280px;
 }
 
 .cs-hero-title {
@@ -136,10 +133,21 @@ a {
     font-weight: 600;
 }
 
-.cs-container {
-    margin: auto;
-	max-width: 1280px;
+.cs-title {
+    margin-bottom: 16px;
+    font-size: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    color: var(--bodyTextColor);
+    font-weight: 600;
+    letter-spacing: -1.6px;
 }
+
+.sub-title {
+    font-size: clamp(20px,2.2vw,25px);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+
 
 .cs-text {
     color: var(--bodyTextColor);
@@ -227,7 +235,7 @@ a {
     content: '';
     width: 0%;
     height: 2px;
-    background: #fff;
+    background: var(--primary);
     opacity: 1;
     position: absolute;
     display: block;

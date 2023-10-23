@@ -1,0 +1,90 @@
+/*-- -------------------------- -->
+<---        Page Banner         -->
+<--- -------------------------- -*/
+.page-banner{
+    background-color: rgba(70, 193, 192, 0.15);
+    position: relative;
+    padding-top: 180px;
+    text-align: center;
+}
+
+/*-- -------------------------- -->
+<---        Contact Us          -->
+<--- -------------------------- -*/
+#contact {
+    .cs-container {
+        display: flex;
+        flex-direction: column;
+        align-items: inherit;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .form-wrapper {
+        border-radius: 5px;
+        padding: 5px;
+        max-width: 475px;
+        width: 100%;
+    }
+
+    .contact-input, textarea {
+        color: var(--bodyTextColor);
+        font: 400 12px/16px "Quicksand";
+        font-size: 16px;
+        margin-bottom: 16px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #333;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        border-radius: 0;
+        resize: none;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        margin-top: 40px;
+        padding: 25px;
+        background-color: var(--secondary);
+        box-shadow: 0 0 29px 0 rgba(0,0,0,.09);
+        width: 100%;
+        max-width: 475px;
+        border-radius: 15px;
+        .cs-text{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+    
+    .button-solid{
+        border: none;
+    }
+
+    
+}
+
+
+
+@media only screen and (min-width: 1024px){
+    #contact {
+        .cs-container{
+            flex-direction: row;
+        }
+        .details {
+            margin-top: 0px;
+            margin-left: 40px;
+        }
+    }
+}
+@media only screen and (max-width: 1023px){
+    #contact {
+        .form-wrapper, .details{
+            margin: 0 auto;
+        }
+    }
+    
+}
