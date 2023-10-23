@@ -6,8 +6,8 @@
 	"scripts": {
 		"watch:eleventy": "eleventy --serve",
 		"build:eleventy": "eleventy",
-		"build:sass": "sass --style=compressed src/assets/sass:./public/css",
-		"watch:sass": "sass --watch src/assets/sass:./public/css",
+		"build:sass": "sass --style=compressed src/assets/sass:./public/assets/css",
+		"watch:sass": "sass --watch src/assets/sass:./public/assets/css",
 		"watch:cms": "npx netlify-cms-proxy-server",
 		"start": "del-cli ./public --force && npm-run-all --parallel watch:*",
 		"build": "npm-run-all --parallel build:*"
