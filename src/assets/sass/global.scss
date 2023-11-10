@@ -219,6 +219,27 @@ a {
     }
 }
 
+.auto-picture {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    max-width: 500px;
+    img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .auto-picture {
+        img {
+            width: 100%;
+        }
+    }
+}
+
 /*-- -------------------------- -->
 <---        Utilities           -->
 <--- -------------------------- -*/
