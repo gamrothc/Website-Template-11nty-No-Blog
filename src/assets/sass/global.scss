@@ -128,17 +128,16 @@ a {
 
 .cs-hero-title {
     margin-bottom: 16px;
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    color: var(--bodyTextColor);
+    font-size: clamp(24px, 5.6vw, 56px);
+    color: var(--headingTextColor);
     font-weight: 600;
 }
 
 .cs-title {
     margin-bottom: 16px;
-    font-size: clamp(1.9375rem, 3.9vw, 3.0625rem);
-    color: var(--bodyTextColor);
+    font-size: clamp(20px, 4vw, 46px);
+    color: var(--headingTextColor);
     font-weight: 600;
-    letter-spacing: -1.6px;
 }
 
 .sub-title {
