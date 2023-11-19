@@ -20,16 +20,22 @@
             <div>
                 <ul>
                     <li><h2>Contact</h2></li>
-                    <li class="contact-v2">
-                        <a href="tel:{{client.phoneForTel}}">
+                    <li>
+                        <a class="footer-icon" href="{{client.address.mapLink}}">
+                            <img loading="lazy" aria-hidden="true" decoding="async" src="/assets/svgs/pin.svg" alt="phone icon" width="17" height="23">
+                            <span class="hover-highlight pin-icon">{{client.address.lineOne}}<br> {{client.address.city}}, {{client.address.state}} {{client.address.zip}}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-icon" href="tel:{{client.phoneForTel}}">
                             <img loading="lazy" aria-hidden="true" decoding="async" src="/assets/svgs/phone.svg" alt="phone icon" width="21" height="21">
                             <span class="hover-highlight">{{client.phoneFormatted}}</span>
                         </a>
                     </li>
-                    <li class="contact-v2">
-                        <a href="mailto:{{client.email}}">
-                            <img loading="lazy" aria-hidden="true" decoding="async" src="/assets/svgs/mail-icon.svg" alt="email icon" width="21" height="15">
-                            <span class="hover-highlight">Click to Email</span>
+                    <li>
+                        <a class="footer-icon" href="mailto:{{client.email}}">
+                            <img loading="lazy" aria-hidden="true" decoding="async" src="/assets/svgs/mail.svg" alt="email icon" width="21" height="15">
+                            <span class="hover-highlight">{{client.email}}</span>
                         </a>
                     </li>
                 </ul>
