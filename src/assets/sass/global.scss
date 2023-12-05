@@ -268,6 +268,28 @@ a {
     width: 100%;
 }
 
+.text-link, .text-link-white {
+    cursor: pointer;
+    text-decoration: underline;
+    color: inherit;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--primary);
+    text-decoration-color: var(--primary);
+}
+
+.text-link {
+    color: var(--bodyTextColor);
+    text-decoration-color: var(--bodyTextColor);
+}
+
+.text-link-white {
+    color: var(--bodyTextColorWhite);
+    text-decoration-color: var(--bodyTextColorWhite);
+}
+
 
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->

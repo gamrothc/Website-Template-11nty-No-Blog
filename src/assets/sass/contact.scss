@@ -15,7 +15,7 @@
     .cs-container {
         display: flex;
         flex-direction: column;
-        align-items: inherit;
+        align-items: center;
         justify-content: center;
         gap: 3rem;
     }
@@ -27,9 +27,10 @@
         width: 100%;
     }
 
-    .contact-input, textarea {
+    .contact-input {
         color: var(--bodyTextColor);
-        font: 400 12px/16px "Quicksand";
+        font-weight: 400;
+        font-family: 'Quicksand', 'Trebuchet MS', sans-serif;
         font-size: 16px;
         margin-bottom: 16px;
         width: 100%;
@@ -79,12 +80,4 @@
             margin-left: 40px;
         }
     }
-}
-@media only screen and (max-width: 1023px){
-    #contact {
-        .form-wrapper, .details{
-            margin: 0 auto;
-        }
-    }
-    
 }
