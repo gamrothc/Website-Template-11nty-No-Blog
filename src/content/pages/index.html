@@ -6,17 +6,15 @@ permalink: '/'
 eleventyNavigation:
   key: Home
   order: 100
+sitemap:
+    priority: 1.00
 ---
 
 {% extends "layouts/base.html" %}
 {% from "components/cta.html" import cta %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/critical-above-fold.css">
-    <link rel="stylesheet" href="/assets/css/home.css" media="print" onload="this.media='all'; this.onload=null;">
-    <noscript>
-        <link rel="stylesheet" href="/assets/css/home.css">
-    </noscript>
+    <link rel="stylesheet" href="/assets/css/home.css">
     <link rel="stylesheet" href="/assets/css/components.css">
 
     <!-- Script for Netlify Identity -->
@@ -51,9 +49,10 @@ eleventyNavigation:
                 </h1>
                 <p class="cs-text">In the digital age, a well-designed website is crucial for business success.</p>
                 <p class="cs-text button-below">At Tacoma Website Design and SEO, we specialize in crafting unique, user-friendly websites that attract and retain customers. Elevate your online presence with us.</p>
-                <a href="/contact/" class="button-solid">Contact Us</a>
+                <a href="/contact-us/" class="button-solid">Contact Us</a>
             </div>
-        </div>
+            
+        </h2>
     </section>
 
 {% endblock %}

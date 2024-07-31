@@ -6,7 +6,7 @@
     <div class="cs-container">
         {# Nav Logo #}
         <a href="/" class="cs-logo" aria-label="back to home">
-            <img src="/assets/images/logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            <img src="/assets/images/logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async" data-img2picture-ignore>
         </a>
         {# Navigation List #}
         <nav class="cs-nav">
@@ -38,7 +38,7 @@
                         {#  If entry.url does not exist, render a span tag instead  #}
                         <span class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
                             {{ entry.key }}
-                            <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                            <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true" data-img2picture-ignore>
                         </span>
                     {% endif %}
 
