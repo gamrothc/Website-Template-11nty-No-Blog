@@ -8,7 +8,7 @@
 This template is used for the starting of all web design projects for Tacoma Web Design and SEO. Further documentation can be found internally and through this README https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS.
 
 ## Optimization Changes
-
+All of this optimization are enabled by default to make the development smooth and allows developer to focus on building the site while the optimization already taken care of. The Auto Image Optimization require some efforts for the developer to be used correctly which is explain below, then other optimization should already be good to go.
 
 - [Auto Image Optimization](#auto-image-optimization)
 - [Auto Generate Critical CSS](#auto-generate-critical-css)
@@ -74,7 +74,7 @@ This is use remove all unnecessary characters from source code without changing 
 
 ### CSS Auto Prefixer
 **How it works:**
-It auto add any css property that ensure compatability accross different browser and their version
+It auto add any css property that ensure compatibility across different browser and their version
 **sample:**
 ```css
     -webkit-user-select: none;
@@ -92,3 +92,4 @@ HTML doesn't really give errors when we have invalid HTML or not using best prac
 **How it works**
  `npm run validate` - run this to validate html before deploying
  `build-and-validate` - use this if no build files yet
+ 
