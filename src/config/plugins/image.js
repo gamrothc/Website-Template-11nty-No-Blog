@@ -4,10 +4,7 @@
  *
  *      The image optimization plugin allows you to automatically generate responsive, optimised images
  *      for your website. It works by taking a standard <img> tag, optimising the images, then replacing
- *      the <img> with a <picture> and <source>'s.
- *
- *      Due to the extra configuration needed to get this to work, we've set this up as an opt-in feature.
- *      We highly, _highly_ recommend a read of the docs above before turning this on.
+ *      the <img> with a <picture> and <source>'s..
  *
  *      Some notes:
  *          1. All <img> tags without a `data-img2picture-ignore` attribute will be optimised. This is an expensive
