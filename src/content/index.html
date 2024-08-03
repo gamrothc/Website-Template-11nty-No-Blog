@@ -1,0 +1,236 @@
+---
+title: 'title text here'
+description: 'description here'
+preloadImg: ''
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+sitemap:
+    priority: 1.00
+---
+
+{% extends "layouts/base.html" %}
+{% from "components/cta.html" import cta %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                home-hero                 -->
+    <!-- ============================================ -->
+    <section id="home-hero">
+        <div class="cs-container">
+            <div class="text-content">
+                <h1 class="cs-hero-title">
+                    Tacoma Web Design and SEO: <span class="text-highlight">Boost</span> Your Online
+                </h1>
+                <p class="cs-text">In the digital age, a well-designed website is crucial for business success.</p>
+                <p class="cs-text button-below">At Tacoma Website Design and SEO, we specialize in crafting unique, user-friendly websites that attract and retain customers. Elevate your online presence with us.</p>
+                <a href="/contact-us/" class="button-solid">Contact Us</a>
+            </div>
+        </h2>
+        </div>
+        <img class="cs-image-background" src="/assets/images/home-hero-bg.jpg" alt="home" width="1440" height="792" aria-hidden="true">
+    </section>
+
+    <!-- ============================================ -->
+    <!--                home-service                 -->
+    <!-- ============================================ -->
+    <section id="home-service" class="cs-section">
+        <div class="cs-container">
+            <h2 class="cs-title">Service Title</h2>
+            <div class="cs-card-group">
+                <a class="cs-item" href="/contact-us/">
+                    <img class="cs-icon" decoding="async" src="/assets/images/service-icon-1.png" alt="icon" width="78" height="78" data-img2picture-ignore>
+                    <h3 class="cs-h3">Being Seen and Found</h3>
+                    <p class="cs-text">
+                        When people look for something on the internet, they use certain words. If your website has these words, it will show up higher in the search results. The higher your website is, the easier it is for people to find you.
+                    </p>
+                    <span class="hover-highlight">Learn More</span>
+                </a>
+                <a class="cs-item" href="/contact-us/">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/images/service-icon-2.png" alt="icon" width="78" height="78" data-img2picture-ignore>
+                    <h3 class="cs-h3">Building Trust</h3>
+                    <p class="cs-text">
+                        People trust websites that are easy to find on the internet. Good SEO can make your website one of these trusted sites. This trust can help turn people who visit your website into customers.
+                    </p>
+                    <span class="hover-highlight">Learn More</span>
+                </a>
+                <a class="cs-item" href="/contact-us/">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/images/service-icon-3.png" alt="icon" width="78" height="78" data-img2picture-ignore>
+                    <h3 class="cs-h3">Getting More Visitors</h3>
+                    <p class="cs-text">
+                        With SEO, we can find out what words people use to find businesses like yours. By using these words on your website, more people will visit your site.
+                    </p>
+                    <span class="hover-highlight">Learn More</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                home-sbs               -->
+    <!-- ============================================ -->
+    <section id="home-sbs" class="cs-section">
+        <div class="cs-container sbs-standard">
+            <div class="sbs-image-left">
+                <img loading="lazy" decoding="async" src="/assets/images/home-hero-bg.jpg" alt="packing" width="527" height="550">
+            </div>
+            <div class="text-content">
+                <span class="cs-topper">About Tacoma Web Design and SEO</span>
+                <h2 class="cs-title">Our Mission</h2>
+                <p class="cs-text">Business A uses various advertising strategies but struggles to connect with an audience genuinely interested in their services due to the broad and quite costly of such methods.</p>
+                <p class="cs-text">On the other hand, Business B allocates its budget to SEO. This more affordable strategy targets people specifically looking for its services. BrightEdge's 2020 data reveals that over 53% of all website traffic comes from organic searches. Plus, SEO-driven leads have a 14.6% close rate, significantly outperforming the 1.7% close rate from traditional advertising.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!--                home-faq               -->
+    <!-- ============================================ -->
+    <script defer src="/assets/js/faq.js"></script>
+    <section id="faq" class="cs-section">
+        <div class="cs-container">
+            <h2 class="cs-title">FAQ's</h2>
+            <ul class="cs-faq-group">
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-cross"></span>
+                        <span class="cs-button-text">
+                            What services does SPS offer?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        SPS provides comprehensive content services, including moving, storage, cleaning, and restoration. Whether you're a policyholder, insurance adjuster, or vendor, we have solutions tailored to your needs.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-cross"></span>
+                        <span class="cs-button-text">
+                            How does the claims process work with SPS?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        After your claim is approved, SPS collaborates closely with your insurance adjuster to manage all logistics related to packing, moving, and storing your belongings efficiently and securely. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-cross"></span>
+                        <span class="cs-button-text">
+                            What areas do you service?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        SPS services 38 states across the U.S. Contact us to confirm if your area is covered and to discuss how we can assist you with your moving and storage needs.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-cross"></span>
+                        <span class="cs-button-text">
+                            Can SPS handle high-value items and delicate belongings?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Yes, SPS specializes in handling high-value and delicate items. We provide white-glove service for premium handling, ensuring your most precious items are moved with the utmost care. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-cross"></span>
+                        <span class="cs-button-text">
+                            How do I start a service with SPS?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        You can initiate services by contacting us directly or through your insurance adjuster. We ensure a seamless start by coordinating with you and your insurance company. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-cross"></span>
+                        <span class="cs-button-text">
+                            How do I become a vendor with SPS?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Interested in joining our vendor network? Visit our vendor registration page on the SPS website and fill out the application form. We welcome vendors who meet our standards of quality and service. 
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What services does SPS offer?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "SPS provides comprehensive content services, including moving, storage, cleaning, and restoration. Whether you're a policyholder, insurance adjuster, or vendor, we have solutions tailored to your needs."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How does the claims process work with SPS?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "After your claim is approved, SPS collaborates closely with your insurance adjuster to manage all logistics related to packing, moving, and storing your belongings efficiently and securely."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What areas do you service?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "SPS services 38 states across the U.S. Contact us to confirm if your area is covered and to discuss how we can assist you with your moving and storage needs."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can SPS handle high-value items and delicate belongings?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, SPS specializes in handling high-value and delicate items. We provide white-glove service for premium handling, ensuring your most precious items are moved with the utmost care."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I start a service with SPS?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can initiate services by contacting us directly or through your insurance adjuster. We ensure a seamless start by coordinating with you and your insurance company."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I become a vendor with SPS?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Interested in joining our vendor network? Visit our vendor registration page on the SPS website and fill out the application form. We welcome vendors who meet our standards of quality and service."
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <!-- ============================================ -->
+    <!--                cta               -->
+    <!-- ============================================ -->
+
+    {{cta("Ready to Start Your Hassle-Free Move?", "Get in touch with us today and experience the ease and efficiency of our moving and storage solutions. Whether you're dealing with an insurance claim or simply need expert moving services, Safe Pack & Store is here to make your transition smooth and stress-free.", "Contact Us Today!")}}
+
+
+{% endblock %}

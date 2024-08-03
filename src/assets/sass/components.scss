@@ -4,85 +4,144 @@
 <---               CTA          -->
 <--- -------------------------- -*/
 .cta {
-	background: linear-gradient(118deg, #7F2FF9 3.95%, #5F71F6 100%);
-	// filter: drop-shadow(0px -1px 16px rgba(0, 0, 0, 0.19));
-
+	padding-top: 0;
 	position: relative;
 	color: #fff;
 
 	.cs-container {
 		text-align: center;
-		
-		h2 {
-			color: #fff;
-			margin-bottom: 2rem;
-		}
+		background: var(--primary);
+		border-radius: 30px;
+		padding: 9em 4.5em;
+		max-width: 1280px;
+		position: relative;
+		font-size: min(2vw, 1em);
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2em;
 
 		.button-solid {
-			background: none;
-			background-color: #fff;
+			background: var(--secondary);
 			color: var(--bodyTextColor);
-			border: 1px solid #fff;
-			margin-right: 1rem;
-				&:before {
-					position: absolute;
-					content: '';
-					top: 0;
-					border-radius: 55px;
-					right: 0;
-					bottom: 0;
-					left: 0;
-					background: linear-gradient(123deg, #7F2FF9 3.95%, #5F71F6 100%);
-					z-index: -1;
-					transition: opacity 0.5s linear;
-					opacity: 0;
-			
-				}
-				&:hover {
-					background-color: transparent;
-					-webkit-transition: background-color 0.5s linear;
-					-ms-transition: background-color 0.5s linear;
-					transition: background-color 0.5s linear;
-					color: #fff;
-				}
-				&:hover:before {
-					opacity: 1;
-				}
+		}
+
+		
+		.cs-text {
+			color: var(--secondary);
+			line-height: 150%;
+			margin: auto;
+			margin-bottom: 0;
+			max-width: 727px;
+			position: relative;
+			opacity: 0.9;
+			z-index: 5;
+		}
+
+		.cs-title {
+			max-width: 600px;
+			font-size: clamp(2rem, 4vw, 3rem);
+			color: var(--secondary);
+			line-height: 110%;
+			margin-bottom: 0;
+			position: relative;
+			z-index: 5;
 		}
 
 
+		&::before{
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			outline-offset: -1rem;
+			outline: 2px solid white;
+			border-radius: 30px;
+			z-index: 1;
+		}
 	}
 
-	.bottom-divider {
-		background-image: url("/assets/svgs/background-curve-clip-purple-bottom.svg");
-		background-size: 100% 80px;
-		bottom: 0;
-		height: 80px;
-		z-index: 1;
-		transform: scale(1,1);
+	.cta-design-1, .cta-design-2 {
 		display: none;
-		background-repeat-y: no-repeat;
-		position: absolute;
-		pointer-events: none;
-		width: 100%;
-		left: 0;
-		right: 0;
-		margin: 0;
-		padding: 0;
-		border: 0;
-		outline: 0;
-		font-size: 100%;
-		-ms-text-size-adjust: 100%;
-		-webkit-text-size-adjust: 100%;
-		vertical-align: baseline;
 	}
 
+	@media only screen and (min-width: 1024px) {
+		.cs-container {
+			gap: 1.5em;
+			padding: 4em;
+		}
+	}
 }
 
-@media only screen and (min-width: 1024px) {
 
-	.cta .bottom-divider { 
-			display: block;
+/*-- -------------------------- -->
+<---        Page Banner         -->
+<--- -------------------------- -*/
+.page-banner {
+    position: relative;
+    text-align: center;
+	margin-top: 60px;
+
+    padding: clamp(5rem, 9vw, 15rem) clamp(1rem, 1.5vw, 2rem);
+
+	&.cs-section {
+		animation: none;
 	}
 
+    .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .cs-background:before {
+        /* Overlay */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.78) 100.76%);
+        opacity: 0.87;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        /* prevents the cursor from interacting with it */
+        pointer-events: none;
+    }
+    .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .cs-container {
+		position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+		align-items: center;
+		gap: clamp(6rem, 25vw, 12rem);
+        opacity: 1;
+        max-width: 950px;
+        animation: fadeUpTransition 0.7s ease-in-out forwards;
+    }
+
+    .cs-hero-title {
+		margin: auto;
+		color: var(--bodyTextColorWhite);
+		max-width: 1000px;
+    }
+
+	@media screen and (min-width: 1024px) {
+		margin-top: 0;
+	}
 }

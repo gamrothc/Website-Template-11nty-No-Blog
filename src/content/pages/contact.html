@@ -11,27 +11,20 @@ sitemap:
 ---
 
 {% extends "layouts/base.html" %}
+{% from "components/banner.html" import banner %}
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
 {% endblock %}
 
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                    Hero                   -->
+    <!--                    Banner                   -->
     <!-- ============================================ -->
 
-    <section class="page-banner cs-section">
-        <div class="cs-container">            
-            <div class="text-content">
-                <h1 class="cs-hero-title text-center">
-                    Contact Us
-                </h1>
-                
-            </div>
-        </div>
-    </section>
+    {{banner("Contact Us")}}
 
     <!-- ============================================ -->
     <!--                Contact Form                  -->
