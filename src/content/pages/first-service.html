@@ -7,18 +7,24 @@ eleventyNavigation:
     key: First Service
     order: 301
     parent: Services
+sitemap:
+    priority: 0.80
 ---
 
 {% extends "layouts/base.html" %}
+{% from "components/banner.html" import banner %}
 
 {% block head %}
+    <link rel="stylesheet" href="/assets/css/components.css">
 {% endblock %}
 
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                    LANDING                   -->
+    <!--                    Banner                   -->
     <!-- ============================================ -->
+
+    {{banner("Contact Us")}}
 
 
 {% endblock %}

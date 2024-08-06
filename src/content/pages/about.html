@@ -2,22 +2,28 @@
 title: 'About Us'
 description: 'Meta description for the page'
 preloadImg: ''
-permalink: 'about/'
+permalink: 'about-us/'
 eleventyNavigation:
     key: About Us
     order: 200
+sitemap:
+    priority: 0.80
 ---
 
 {% extends "layouts/base.html" %}
+{% from "components/banner.html" import banner %}
 
 {% block head %}
+<link rel="stylesheet" href="/assets/css/components.css">
 {% endblock %}
 
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                    LANDING                   -->
+    <!--                    Banner                   -->
     <!-- ============================================ -->
+
+    {{banner("About Us")}}
 
 
 {% endblock %}

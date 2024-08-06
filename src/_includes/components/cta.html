@@ -1,16 +1,16 @@
-{% macro cta(h1Text, ctaButtonOne, ctaLinkOne, ctaButtonTwo, ctaLinkTwo) %}
+{% macro cta(h2Text, pText, buttonText) %}
     <!-- ============================================ -->
     <!--             Final Call to Action             -->
     <!-- ============================================ -->
-
     <section class="cta cs-section">
         <div class="cs-container">
             <h2 class="cs-title">
-                {{h1Text}}
+                {{h2Text}}
             </h2>
-            <a href="{{ ctaLinkOne }}.html" class="button-oval button-solid">{{ ctaButtonOne }}</a>
-            <a href="{{ ctaLinkTwo }}.html" class="button-oval button-transparent">{{ ctaButtonTwo }}</a>
+            <p class="cs-text">{{pText}}</p>
+            <a href="/contact-us" class="button-solid">
+                {{ buttonText }}
+            </a>
         </div>
-        <div aria-hidden="true" class="bottom-divider"></div>
     </section>
 {% endmacro %}

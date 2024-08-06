@@ -2,34 +2,29 @@
 title: 'Contact'
 description: 'Meta description for the page'
 preloadImg: ''
-permalink: 'contact/'
+permalink: 'contact-us/'
 eleventyNavigation:
     key: Contact Us
     order: 400
+sitemap:
+    priority: 0.80
 ---
 
 {% extends "layouts/base.html" %}
+{% from "components/banner.html" import banner %}
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
 {% endblock %}
 
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                    Hero                   -->
+    <!--                    Banner                   -->
     <!-- ============================================ -->
 
-    <section class="page-banner cs-section">
-        <div class="cs-container">            
-            <div class="text-content">
-                <h1 class="cs-hero-title text-center">
-                    Contact Us
-                </h1>
-                
-            </div>
-        </div>
-    </section>
+    {{banner("Contact Us")}}
 
     <!-- ============================================ -->
     <!--                Contact Form                  -->
@@ -40,8 +35,8 @@ eleventyNavigation:
                 <h2 class="cs-title">Send a Message</h2>
                 <form method="post" name="contact" data-netlify="true">
                     <input class="contact-input" aria-label="name" name="name" placeholder="Name *" type="text" required>
-                    <input class="contact-input" aria-label="email" name="email" placeholder="Email Address *" type="email" required>
-                    <input class="contact-input" aria-label="phone number" name="phone" placeholder="Phone Number *" type="tel" required>
+                    <input class="contact-input" aria-label="email" id="phone" name="phone" placeholder="Email Address *" type="email" required>
+                    <input class="contact-input" aria-label="phone number" id="phone" name="phone"  placeholder="Phone Number *" type="tel" required>
                     <textarea class="contact-input" aria-label="write your message" name="message" placeholder="Type your Message Here..."></textarea>
                     <p>
                         <button name="submit" type="submit" id="contact-submit" class="button-solid button-yellow" data-submit="...Sending">Submit</button>

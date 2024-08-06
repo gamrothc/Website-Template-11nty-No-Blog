@@ -1,0 +1,15 @@
+{% macro banner(h1Text, topper) %}
+    <!-- ============================================ -->
+    <!--            Page Banner           -->
+    <!-- ============================================ -->
+    <section class="page-banner cs-section">
+        <img class="cs-background" decoding="async" loading="eager" src="/assets/images/home-hero-bg.jpg" aria-hidden="true" alt="" width="1440" height="452" data-img2picture-widths="480, 768, 1024, 1280">
+        <div class="cs-container">            
+            <div class="text-content">
+                <h1 class="cs-hero-title text-center">
+                    {{h1Text}}
+                </h1>
+            </div>
+        </div>
+    </section>
+{% endmacro %}
