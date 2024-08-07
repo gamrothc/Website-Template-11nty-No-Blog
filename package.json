@@ -11,8 +11,9 @@
 		"watch:cms": "npx netlify-cms-proxy-server",
 		"start": "del-cli ./public --force && npm-run-all --parallel watch:*",
 		"build": "npm-run-all --parallel build:*",
-		"validate": "node validate-html.js",
-    	"build-and-validate": "npm run build && npm run validate"
+		"validate": "node scripts/validate-html.js",
+		"build-and-validate": "npm run build && npm run validate",
+		"check-links": "node scripts/broken-link-check.js"
 	},
 	"repository": {
 		"type": "git",
@@ -34,6 +35,7 @@
 		"@quasibit/eleventy-plugin-sitemap": "^2.2.0",
 		"@sherby/eleventy-plugin-files-minifier": "^1.1.1",
 		"autoprefixer": "^10.4.16",
+		"broken-link-checker": "^0.7.8",
 		"del-cli": "^5.0.0",
 		"eleventy-critical-css": "^2.0.2",
 		"eleventy-plugin-img2picture": "^5.0.0",
