@@ -12,6 +12,7 @@ const configCritical = require("./src/config/plugins/critical");
 const configImage = require("./src/config/plugins/image");
 const configCss = require("./src/config/eleventy/css");
 const configJs = require("./src/config/eleventy/javascript");
+const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
 
 const { DateTime } = require('luxon');
 

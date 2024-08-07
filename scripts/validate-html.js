@@ -13,7 +13,7 @@ function log(message, isError) {
 }
 
 async function validateHTMLFiles() {
-  const buildOutputDirectory = path.resolve(__dirname, 'public'); // Adjust the path if needed
+  const buildOutputDirectory = path.resolve(__dirname, '../public'); // Adjust the path if needed
   const htmlFilePaths = [];
 
   function findHTMLFiles(dir) {
