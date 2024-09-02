@@ -25,7 +25,7 @@ module.exports = {
                 entryPoints: [inputPath],
                 write: false,
                 bundle: true,
-                minify: isProduction,
+                minify: !!isProduction,
                 sourcemap: !isProduction,
                 target: isProduction ? "es6" : "esnext",
             }).outputFiles[0].text;
