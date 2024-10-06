@@ -1,7 +1,7 @@
 {
 	"name": "Business Name",
 	"email": "info@domainname.com",
-	"phoneForTel": "111-222-3333",
+	"phoneForTel": "+1-111-222-3333",
 	"phoneFormatted": "(111) 222-3333",
 	"address": {
 		"lineOne": "132 Michigan Ave",
