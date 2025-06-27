@@ -3,13 +3,13 @@ const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const pluginDirectoryOutput = require("@11ty/eleventy-plugin-directory-output");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 const pluginCritical = require("eleventy-critical-css");
-const pluginImage = require("eleventy-plugin-img2picture");
+const pluginImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
 
 
 // Config Imports
 const configSitemap = require("./src/config/plugins/sitemap");
 const configCritical = require("./src/config/plugins/critical");
-const configImage = require("./src/config/plugins/image");
+const configImages = require("./src/config/plugins/image");
 const configCss = require("./src/config/eleventy/css");
 const configJs = require("./src/config/eleventy/javascript");
 const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
@@ -30,10 +30,12 @@ module.exports = function (eleventyConfig) {
     // https://github.com/quasibit/eleventy-plugin-sitemap
     eleventyConfig.addPlugin(pluginSitemap, configSitemap);
 
-    // Converts <img> tags to responsive <picture>s. An opt-in feature. Please read config/plugins/image.js to find out more
-    // https://github.com/saneef/eleventy-plugin-img2picture
-    eleventyConfig.addPlugin(pluginImage, configImage)
-
+    /*
+     * 🖼️ Image Optimization
+     * Resize and optimize images for better performance using {% getUrl %}
+     * Documentation: https://github.com/CodeStitchOfficial/eleventy-plugin-sharp-images
+     */
+    eleventyConfig.addPlugin(pluginImages, configImages);
     // Production only plugins. Only run when "npm run build" is used.
     if (isProduction) {
         // Minify all HTML, CSS, JSON, XML, XSL and webmanifest files. Keeps comments when developing and removes them when live, for a smaller filesize
@@ -55,6 +57,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/favicons");
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
     eleventyConfig.addPassthroughCopy("./src/assets/images");
+		eleventyConfig.addPassthroughCopy("./src/assets/pdf");
 	eleventyConfig.addPassthroughCopy("./src/assets/svgs");
 
 	// The optimization plugin will take care of copying the css and js so this is commented just for reference
